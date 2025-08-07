@@ -1,6 +1,5 @@
 <?php
-    include '../modeles/config.php';
-
+    include '../models/config.php';
 
 ?>
 <!DOCTYPE html>
@@ -27,6 +26,22 @@
                 <img src="../public/img/cosmos-removebg-preview.png" alt="" class="logo-img">
             </div>
             <ul id="list">
+                <a href="" class="menu-item">
+                    <img src="../public/img/dashboard_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.png" alt="" class="icon-menu">
+                    <h6 class="menu_name">Dashboard</h6>
+                </a>
+                <a href="" class="menu-item">
+                    <img src="../public/img/dashboard_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.png" alt="" class="icon-menu">
+                    <h6 class="menu_name">Dashboard</h6>
+                </a>
+                <a href="" class="menu-item">
+                    <img src="../public/img/dashboard_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.png" alt="" class="icon-menu">
+                    <h6 class="menu_name">Dashboard</h6>
+                </a>
+                <a href="" class="menu-item">
+                    <img src="../public/img/dashboard_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.png" alt="" class="icon-menu">
+                    <h6 class="menu_name">Dashboard</h6>
+                </a>
                 <a href="" class="menu-item">
                     <img src="../public/img/dashboard_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.png" alt="" class="icon-menu">
                     <h6 class="menu_name">Dashboard</h6>
