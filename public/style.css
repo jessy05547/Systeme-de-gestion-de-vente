@@ -1,0 +1,114 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'poppins', sans-serif;
+}
+.tronc{
+    width: 100%;
+    height: 100vh;
+    background-color: #171520;
+}
+/* barre de recheche "entete de page" en haut */
+.menu{
+    width: 80%;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+    position: fixed;
+    top: 0;
+    right: 0;
+    border-bottom: 1px solid #c2c0c034;
+}
+.src_conte{
+    position: relative;
+    width: 30%;
+    height: 60px;
+    display: flex;
+    align-items: center;
+}
+.page{
+    color: #ffffff;
+    text-transform: uppercase;
+    font-size: 20px;
+    cursor: pointer;
+}
+#search{
+    width: 100%;
+    height: 100%;
+    border-radius: 30px;
+    padding: 0 20px;
+    border: none;
+    outline: none;
+    font-size: 16px;
+    background: #c2c0c034;
+    color: #d9d8df;
+    font-size: 18px;
+}
+.search-icon{
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    right: 20px;
+    color: #171520;
+    font-size: 20px;
+    cursor: pointer;
+}
+#search:not(:placeholder-shown) + .search-icon{
+    display: none;
+}
+/* menu à gauche */
+.left{
+    width: 20%;
+    height: 100vh;
+    position: fixed;
+    left: 0;
+    top: 0;
+    background:linear-gradient(180deg, #1b151f 20%, #131017 100%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+.logo-img{
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    top: 20px;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+}
+.menu-item{
+    width: 100%;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    padding: 0 20px;
+    color: #ffffff;
+    font-size: 18px;
+    cursor: pointer;
+    gap: 20px;
+    text-decoration: none;
+    transition: all linear .8s ;
+    /* border-radius: 30px; */
+}
+.menu-item:hover{
+    width: 120%;
+    background: #171520;
+    
+}
+.icon-menu{
+    width: 60px;
+    height: 60px;
+    color: #ffffff;
+    font-size: 20px;
+}
+.menu_name{
+    font-size: 18px;
+    text-transform: capitalize;
+    font-size: 20px;
+}
