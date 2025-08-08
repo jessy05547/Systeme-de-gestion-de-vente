@@ -2,20 +2,14 @@
 include 'index.php';
 
 ?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../public/dashboard.css">
     <title>Document</title>
 </head>
 <body>
-    <section class="tableau">
-        <div class="btn_add">
-            <a href="create.php" class="btn_add_item">Achat</a>
-        </div>
-    </section>
+    
 </body>
 </html>
