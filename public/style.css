@@ -162,3 +162,20 @@
     padding: 15px;
     overflow-x: hidden;
 }
+.clts{
+    position: absolute;
+    background: #04d6c5;
+    color: #ffffff;
+    font-size: 1.2rem;
+    text-decoration: none;
+    padding: 15px 40px;
+    border-radius: 12px;
+    right: 35px;
+    top: 10px;
+    transition: all linear .8s;
+}
+.clts:hover{
+    color: #15ff00;
+    background: #ffffff23;
+    border: 1px solid #139907;
+}

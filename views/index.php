@@ -1,6 +1,4 @@
 <?php
-    include '../models/config.php';
-    
     switch (basename($_SERVER['PHP_SELF'])) {
         case 'dashboard.php':
             $name_page = "Tableau de bord";
@@ -22,6 +20,12 @@
             break;
         case 'update.php':
             $name_page = "Mise à jour";
+            break;
+        case 'ajout.produit.php':
+            $name_page = "Ajout de produit";
+            break;
+        case 'formulaire.php':
+            $name_page = "Facture";
             break;
         default:
             $name_page = "Page inconnue";
@@ -45,6 +49,7 @@
                 <img src="../public/img/8666693_search_icon.png" alt="" class="search-icon">
             </form>
         </nav>
+        
         <!-- menu à gauche de page -->
         <div class="left">
             <div class="logo">
@@ -81,6 +86,10 @@
         </div>
         <!-- L'endroit où l'on met les différents pages -->
         <div class="right">
+            <a href="formulaire.php?action=create" class="clts" >Nouvel client</a>
             <div class="content">
+                    
+                
+                
                 
          
