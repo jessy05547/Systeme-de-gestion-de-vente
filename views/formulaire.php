@@ -1,5 +1,5 @@
 <?php
-include 'index.php';
+include 'views/index.php';
 ?>
 
 <!DOCTYPE html>
@@ -12,7 +12,7 @@ include 'index.php';
 </head>
 <body>
     <h2>Créer un nouvel client</h2>
-    <form action=".." method="POST" id="form">
+    <form action="/client/create" method="POST" id="form">
         <div class="clt">
             <label for="nom">Nom :</label>
             <input type="text" name="nom" id="inp" required>

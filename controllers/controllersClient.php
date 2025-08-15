@@ -1,27 +1,28 @@
 <?php
 class ControllersClient{
     private $client;
-    public function __construct($db){
-        $this->client = new ModelsClient($db);
+    public function __construct(){
+        $this->client = new ModelsClient();
     }
     public function index(){
-        $stmt = $this->client->read();
-        include_once '../views/index.php';
+        // $stmt = $this->client->read();
+        require_once 'views/index.php';
     }
 
     public function create(){
         if($_POST){
-            $this->client->name = $_POST['nom'];
-            $this->client->first = $_POST['prenom'];
-            $this->client->tel  = $_POST['tel'];
-            $this->client->email = $_POST['email'];
-            $this->client->ntpayer = $_POST['net_a_payer'];
+            $name = $_POST['nom'];
+            $first = $_POST['prenom'];
+            $tel  = $_POST['tel'];
+            $email = $_POST['email'];
+            $adr = $_POST['adr'];
+            $ntpayer = $_POST['net_a_payer'];
 
-            if($this->client->create()){
-                header("Location:index.php");
+            if($this->client->create($name,$first,$tel, $email,$adr, $ntpayer )){
+                header("Location: index");
             }
         }
-        include_once '../views/formulaire.php';
+        require_once 'views/formulaire.php';
     }
 
     public function edit($id){

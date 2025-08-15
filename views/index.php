@@ -86,7 +86,7 @@
         </div>
         <!-- L'endroit où l'on met les différents pages -->
         <div class="right">
-            <a href="formulaire.php?action=create" class="clts" >Nouvel client</a>
+            <a href="/client/form" class="clts" >Nouvel client</a>
             <div class="content">
                     
                 
