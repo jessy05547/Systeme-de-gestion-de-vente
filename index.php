@@ -2,16 +2,18 @@
 require_once 'config/database.php';
 require_once 'models/modelsClient.php';
 require_once 'controllers/controllersClient.php';
+require_once 'models/modelsProduit.php';
+require_once 'controllers/controllersProduit.php';
 
 $db = new Database();
 $conn = $db->getConnexion();
 $controller = new ControllersClient($conn);
+$produit = new ControllersProduit($conn);
 $requete = $_SERVER['REQUEST_URI'];
 $lien = ltrim($requete, '/');
 
 // $action = isset($_GET[$lien]) ? $_GET[$lien] : 'index';
 $action =  $lien;
-
 
 $id = isset($_GET['id']) ? $_GET['id'] : null;
 
@@ -32,43 +34,42 @@ switch($action) {
         break;
     case 'client/delete':
         if ($id) {
-            $controller->delete($id);
+            $result = $controller->delete($id);
+            if($result){
+                header("Location: /controllers/controllersClient.php=client/liste");
+                exit();
+            }
+            // $controller->delete($id);
         } else {
             $controller->index();
         }
         break;
+    case 'client/liste':
+        $controller->affiche();
+        // include_once 'views/client/client.php';
+        break;
+        
+    case 'produit/liste':
+        $produit->lire();
+        break;
+
+    case 'accueil':
+        include_once 'views/index.php';
+        break;
+    case 'produit/nouveau':
+        $produit->ajout();
+        break;
+    case 'produit/affiche':
+        include_once 'views/produit/produit.php';
+        break;
+    case 'produit/ajout':
+        include_once 'views/produit/ajoutProduit.php';
+        break;
     case 'client/form':
-        include_once 'views/formulaire.php';
+        include_once 'views/client/formulaire.php';
         break;
     default:
-        include_once 'views/authentification.php';
+        include_once 'views/index.php';
         break;
 }
-// switch($action){
-//     case 'index':
-//         $controller->index();
-//         break;
-        // Code to display the list of clients
-    // case 'create'://client/create
-    //     $controller->create();
-    //     // Code to handle client creation
-    //     break;
-    // case 'edit':
-    //     $controller->edit($id);
-    //     // Code to handle client editing
-    //     break;
-    // case 'delete':
-    //     $controller->delete($id);
-    //     // Code to handle client deletion
-        // break;
-//     case 'client':
-//         include_once 'views/formulaire.php';
-//         // Code to display the client creation form
-//         break;
-//     default:
-//         // Handle unknown action
-//         // $controller->index();
-//         include_once 'views/authentification.php';
-//         break;
-// }
 ?>

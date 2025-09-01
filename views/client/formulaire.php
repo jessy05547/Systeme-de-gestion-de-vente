@@ -1,5 +1,5 @@
 <?php
-include 'views/index.php';
+require_once 'views/index.php';
 ?>
 
 <!DOCTYPE html>

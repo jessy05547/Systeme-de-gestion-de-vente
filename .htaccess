@@ -4,6 +4,9 @@ RewriteEngine On
 # Si ce n'est pas un fichier ou dossier existant
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
+addDefaultCharset UTF-8
+RewriteCond %{HTTPS} off
+RewriteRule ^(.*)$ https://%{HTTP_HOST}/$1 [R=301, L]
 
 # Rediriger vers index.php
 RewriteRule ^ index.php [L]

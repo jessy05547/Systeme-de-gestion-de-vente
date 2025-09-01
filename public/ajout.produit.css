@@ -1,0 +1,67 @@
+.formulaire{
+    font-family: 'poppins';
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+.title-form{
+    font-size: 28px;
+    color: #605a7c;
+    text-shadow: 2px 2px 5px #131216;
+    border-bottom: 1px solid #605a7c;
+    margin-bottom: 25px;
+    padding: 15px 0;
+}
+.prod{
+    width: 50%;
+}
+.gr{
+    margin: 10px 0;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    line-height: 30px;
+}
+label{
+    color: #131216;
+    font-size: 18px;
+}
+#inp-txt{
+    width: 100%;
+    height: 50px;
+    border-radius: 12px;
+    padding-left:15px ;
+    font-size: 16px;
+    color: #0993bd;
+    border: none;
+    background:#1312163f;
+}
+#inp-txt:focus{
+    outline:1px solid #0993bd;
+}
+.btn_valide{
+    position: absolute;
+    bottom: 5%;
+    right: 5%;
+    display: flex;
+    gap: 0 50px;
+}
+input[type="submit"]{
+    border:1px solid #027083;
+    padding: 15px 50px;
+    font-size: 17px;
+    color: #027083;
+    font-weight: 500;
+    background: transparent;
+    border-radius: 10px;
+    cursor: pointer;
+}
+.retour{
+    padding: 15px 50px;
+    text-decoration: none;
+    color: #d46d0d;
+    transition: .8s;
+    border: 1px solid #d46d0d;
+    border-radius: 12px;
+
+}

@@ -12,6 +12,9 @@
         case 'produit.php':
             $name_page = "Produit";
             break;
+        case 'produit/ajout':
+            $name_page = "Enregistrement produit";
+            break;
         case 'read.php':
             $name_page = "Vente";
             break;
@@ -30,6 +33,8 @@
         default:
             $name_page = "Page inconnue";
     }
+
+    
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -60,11 +65,11 @@
                     <img src="../public/img/dashboard (2).png" alt="" class="icon-menu">
                     <h6 class="menu_name">Tableau de bord</h6>
                 </a>
-                <a href="client.php" class="menu-item">
+                <a href="../client/liste" class="menu-item">
                     <img src="../public/img/customer.png" alt="" class="icon-menu">
                     <h6 class="menu_name">Client</h6>
                 </a>
-                <a href="produit.php" class="menu-item">
+                <a href="../produit/ajout" class="menu-item">
                     <img src="../public/img/product-management.png" alt="" class="icon-menu">
                     <h6 class="menu_name">Produit</h6>
                 </a>
@@ -78,14 +83,13 @@
                 <img src="../public/img/9057332_profile_icon.png" alt="" class="profil-img">
                 <div class="name">
                     <h6 class="profil-name">RAZAFINDRAIBE</h6>
-
                     <p class="first-name">Jessy Roméo</p>
                 </div>
-                
             </div>
         </div>
         <!-- L'endroit où l'on met les différents pages -->
         <div class="right">
+            
             <a href="/client/form" class="clts" >Nouvel client</a>
             <div class="content">
                     

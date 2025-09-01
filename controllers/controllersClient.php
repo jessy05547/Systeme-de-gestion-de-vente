@@ -22,7 +22,7 @@ class ControllersClient{
                 header("Location: index");
             }
         }
-        require_once 'views/formulaire.php';
+        require_once 'views/index.php';
     }
 
     public function edit($id){
@@ -44,8 +44,17 @@ class ControllersClient{
 
     public function delete($id){
         if($this->client->delete($id)){
-            header("Location: index.php");
+            header("Location: ../views/client/client.php");
+            // require __DIR__ . '/../views/client/client.php';
+        }else{
+            echo "Suppression échoué";
         }
+    }
+
+    public function affiche(){
+        $liste_client = $this->client->read();
+        // include_once '../views/client/client.php';
+        require __DIR__ . '/../views/client/client.php';
     }
 }
 ?>
